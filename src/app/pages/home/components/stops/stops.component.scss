@@ -1,0 +1,20 @@
+.stop__container {
+  max-width: 600px;
+  border: 3px solid #00B4CC;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.03s ease;
+}
+
+.stop__container:hover {
+  cursor: pointer;
+  background-color: #f6f9ff;
+  border: 3px solid #00aabb;
+}
+.stop_info {
+  display: block;
+}
+:host {
+  margin: auto;
+}

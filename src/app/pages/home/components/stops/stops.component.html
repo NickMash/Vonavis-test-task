@@ -1,0 +1,8 @@
+<div class="stop__container" *ngFor="let item of stops" (click)="showTransport(item.id, stops.indexOf(item))">
+  <span class="stop_info">City: {{item.city}}</span>
+  <span class="stop_info">Stop name: {{item.name}}</span>
+  <span class="stop_info">Coordinates: {{item.coords}}</span>
+  <app-transport
+    [stopInfo]="item"
+  ></app-transport>
+</div>

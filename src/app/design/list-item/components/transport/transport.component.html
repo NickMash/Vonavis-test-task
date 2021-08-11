@@ -1,0 +1,20 @@
+<ng-container *ngIf="(stopInfo.transportInfo && !stopInfo.error) else error">
+  <div class="transport__container" *ngFor="let item of stopInfo.transportInfo">
+    <div>
+      <div>Direction: {{item.direction}}</div>
+      <div>Line: {{item.line}}</div>
+      <div>Transport title: {{item.mode.title}}</div>
+      <div>Transport name: {{item.mode.name}}</div>
+      <div>Arrival time: {{item.arrivalTime | date:'medium'}}</div>
+      <div>Scheduled time: {{item.scheduledTime | date:'medium'}}</div>
+      <div *ngIf="item.platform">Platform: {{item.platform.name}}</div>
+      <div>State: {{item.state}}</div>
+    </div>
+    <div class="icon">
+      <img src="{{item.mode.iconUrl}}" alt="">
+    </div>
+  </div>
+</ng-container>
+<ng-template #error>
+  <div class="error">{{stopInfo.error}}</div>
+</ng-template>
